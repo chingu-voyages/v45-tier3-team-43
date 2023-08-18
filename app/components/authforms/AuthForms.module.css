@@ -1,0 +1,33 @@
+.form {
+  max-width: 30rem;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.switchModeOuter {
+  color: hsl(0, 0%, 45%);
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 300;
+}
+
+.switchModeInner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.switchToLogin {
+  color: rgb(38, 38, 38);
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .switchToLogin:hover {
+    text-decoration: underline;
+  }
+}
