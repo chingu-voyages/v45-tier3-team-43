@@ -1,5 +1,5 @@
-import classes from "./page.module.css";
+import HomePage from "./components/homepage/HomePage";
 
 export default function Home() {
-  return <div className={classes.hello}>Hello</div>;
+  return <HomePage />;
 }
