@@ -1,0 +1,10 @@
+.container {
+  padding: 3rem 0;
+}
+
+.container h1 {
+  color: blue;
+  width: fit-content;
+  margin-inline: auto;
+  margin-bottom: 3rem;
+}
