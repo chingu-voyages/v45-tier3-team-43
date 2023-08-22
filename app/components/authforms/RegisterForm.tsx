@@ -32,7 +32,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ toggleMode }) => {
         toggleMode();
       })
       .catch((error) => {
-        toast.error("Something went wrong");
+        toast.error(error.response.data.error);
       })
       .finally(() => {
         setIsLoading(false);
