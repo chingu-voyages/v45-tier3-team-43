@@ -94,7 +94,7 @@ const DashboardClient: React.FC<DashboardClientProps> = ({ store }) => {
             />
             <Input
               id="subdomain"
-              label="Subdomain (no spaces)"
+              label="Subdomain (letters and numbers only)"
               disabled={isLoading}
               register={register}
               errors={errors}

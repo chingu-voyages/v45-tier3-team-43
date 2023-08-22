@@ -27,10 +27,9 @@ export async function POST(request: Request) {
 
   const { name, description, subdomain } = body;
 
-  if (/\s/.test(subdomain)) {
-    // name has any kind of whitespace
+  if (/^[A-Za-z0-9]*$/.test(subdomain) !== true) {
     return NextResponse.json(
-      { error: "Subdomain cannot contain spaces!" },
+      { error: "letters/numbers only for subdomain!" },
       { status: 422 }
     );
   }
