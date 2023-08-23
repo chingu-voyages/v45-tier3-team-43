@@ -19,4 +19,20 @@ model User {
   hashedPassword String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  store Store?
+}
+
+model Store {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  name String?
+  subdomain String? @unique
+  description String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  userId String @db.ObjectId @unique
+
+  // line below creates a relation with the User using the userId field and 
+  // it references the User model id field
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 }

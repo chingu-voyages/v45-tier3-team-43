@@ -1,0 +1,63 @@
+.navbar {
+  background-color: hsl(221, 61%, 63%);
+  padding: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navActions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.logoutButton,
+.createStoreButton,
+.visitStoreButton,
+.createStoreFormButton,
+.cancelFormButton {
+  width: fit-content;
+  height: 2rem;
+  font: inherit;
+  padding-inline: 0.5rem;
+  background-color: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.logoutButton,
+.cancelFormButton {
+  background-color: rgb(141, 16, 16);
+}
+
+.form {
+  max-width: 36rem;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (hover: hover) {
+  .logoutButton:hover,
+  .createStoreButton:hover,
+  .visitStoreButton:hover,
+  .createStoreFormButton:hover,
+  .cancelFormButton:hover {
+    opacity: 0.8;
+  }
+}
