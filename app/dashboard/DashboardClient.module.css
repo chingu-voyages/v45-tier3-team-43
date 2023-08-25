@@ -1,25 +1,24 @@
 .navbar {
-  background-color: hsl(221, 61%, 63%);
+  background-color: hsl(244, 42%, 36%);
   padding: 1rem;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-.navActions {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
+.navbar h2 {
+  color: white;
+  font-size: 1.15rem;
 }
 
 .logoutButton,
 .createStoreButton,
 .visitStoreButton,
 .createStoreFormButton,
-.cancelFormButton {
+.cancelFormButton,
+.addProductButton {
   width: fit-content;
   height: 2rem;
   font: inherit;
@@ -31,6 +30,15 @@
 }
 
 .logoutButton,
+.createStoreButton,
+.visitStoreButton,
+.addProductButton,
+.cancelFormButton,
+.createStoreFormButton {
+  font-size: 0.8rem;
+}
+
+.logoutButton,
 .cancelFormButton {
   background-color: rgb(141, 16, 16);
 }
@@ -38,11 +46,13 @@
 .form {
   max-width: 36rem;
   margin-inline: auto;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 1.5rem;
+  padding-inline: 0.5rem;
 }
 
 .formActions {
@@ -52,12 +62,108 @@
   gap: 1rem;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.lowerNav {
+  border-bottom: 1px solid black;
+  padding: 2rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tabButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tabButtons > button {
+  width: 6rem;
+  height: 2rem;
+  font: inherit;
+  padding-inline: 0.5rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid black;
+  color: black;
+  cursor: pointer;
+}
+
+.screen {
+  width: 100%;
+  padding: 1rem 0.5rem 1rem 0.5rem;
+}
+
+.screenHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.screenHeading h3 {
+  font-size: 1.15rem;
+}
+
+.products {
+  border: 1px solid black;
+  padding: 1rem 0.5rem;
+  border-radius: 0.6rem;
+  background-color: #f1f0f0;
+}
+
 @media (hover: hover) {
   .logoutButton:hover,
   .createStoreButton:hover,
   .visitStoreButton:hover,
   .createStoreFormButton:hover,
-  .cancelFormButton:hover {
+  .cancelFormButton:hover,
+  .addProductButton:hover {
     opacity: 0.8;
+  }
+}
+
+@media (min-width: 768px) {
+  .screenHeading h3 {
+    font-size: 2rem;
+  }
+  .products {
+    padding: 1.5rem 1.5rem;
+    border-radius: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar h2 {
+    color: white;
+    font-size: 1.5rem;
+  }
+  .container {
+    flex-direction: row;
+  }
+  .lowerNav {
+    background-color: rgb(179, 197, 247);
+    width: 14rem;
+    border-bottom: none;
+    border-right: 1px solid black;
+    justify-content: flex-start;
+    gap: 1.5rem;
+  }
+  .tabButtons {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .screen {
+    width: 100%;
+    padding: 1.5rem 1.5rem 1.5rem 2rem;
   }
 }
