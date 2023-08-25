@@ -1,0 +1,54 @@
+.container {
+  width: 100%;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.backButton {
+  width: fit-content;
+  height: 2rem;
+  font: inherit;
+  padding-inline: 0.5rem;
+  background-color: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 3rem;
+}
+
+.inputs {
+  max-width: 36rem;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.note {
+  margin-bottom: 1rem;
+}
+
+.imageUploads {
+  max-width: fit-content;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.addProductButton {
+  width: 10rem;
+  height: 2rem;
+  font: inherit;
+  padding-inline: 0.5rem;
+  background-color: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-inline: auto;
+}
