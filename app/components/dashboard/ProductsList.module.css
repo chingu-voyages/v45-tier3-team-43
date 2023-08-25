@@ -1,0 +1,139 @@
+.productsContainer {
+  margin-bottom: 1rem;
+}
+
+.productsContainer h3 {
+  margin-bottom: 2rem;
+}
+
+.products > :nth-child(2n) {
+  background: #ccc;
+}
+
+.product {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border: 1px solid black;
+  border-top: none;
+}
+
+.noProducts {
+  text-align: center;
+}
+
+.productInfo {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.columnTitles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px dashed black;
+}
+
+.infoTitle {
+  justify-self: center;
+  font-weight: 700;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-self: center;
+}
+
+.details p {
+  max-width: 100%;
+  min-width: 100%;
+  justify-self: center;
+  text-align: center;
+  padding-inline: 0.4rem;
+  overflow-wrap: break-word;
+}
+
+.productActions {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.images {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid black;
+  padding-bottom: 0.5rem;
+}
+
+.imageContainer {
+  height: 12rem;
+  width: 10rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.productActions {
+  display: flex;
+  gap: 1rem;
+  justify-self: flex-end;
+}
+
+.deleteProductButton,
+.viewProductPicturesButton {
+  width: fit-content;
+  height: 2rem;
+  font: inherit;
+  font-size: 0.8rem;
+  padding-inline: 0.5rem;
+  background-color: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.deleteProductButton {
+  background-color: rgb(141, 16, 16);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 400px) {
+  .images {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 600px) {
+  .columnTitles {
+    width: 65%;
+    border-bottom: none;
+    grid-template-columns: 3fr 1fr;
+  }
+  .productInfo {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 65% 35%;
+    gap: 1rem;
+    padding: 0.5rem 0;
+  }
+  .details {
+    grid-template-columns: 3fr 1fr;
+  }
+}
