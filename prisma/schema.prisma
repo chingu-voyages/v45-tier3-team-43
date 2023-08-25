@@ -21,6 +21,7 @@ model User {
   updatedAt DateTime @updatedAt
 
   store Store?
+  products Product[]
 }
 
 model Store {
@@ -32,7 +33,25 @@ model Store {
   updatedAt DateTime @updatedAt
   userId String @db.ObjectId @unique
 
+  products Product[]
+
   // line below creates a relation with the User using the userId field and 
   // it references the User model id field
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Product {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  title String
+  description String
+  price Int
+  images String[]
+  createdAt DateTime @default(now())
+  userId String @db.ObjectId
+  storeId String @db.ObjectId
+
+  // line below creates a relation with the User using the userId field and 
+  // it references the User model id field
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  store Store @relation(fields: [storeId], references: [id], onDelete: Cascade)
 }
