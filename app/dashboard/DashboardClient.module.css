@@ -23,7 +23,7 @@
   height: 2rem;
   font: inherit;
   padding-inline: 0.5rem;
-  background-color: blue;
+  background-color: hsl(244, 42%, 36%);
   color: white;
   border: none;
   cursor: pointer;
@@ -77,6 +77,7 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  flex-shrink: 0;
 }
 
 .tabButtons {
@@ -93,9 +94,13 @@
   padding-inline: 0.5rem;
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid black;
+  /* border-bottom: 1px solid black; */
   color: black;
   cursor: pointer;
+}
+
+.tabButtons .activeTab {
+  border-bottom: 1px solid black;
 }
 
 .screen {

@@ -130,8 +130,18 @@ const DashboardClient: React.FC<DashboardClientProps> = ({
               </button>
             )}
             <div className={classes.tabButtons}>
-              <button onClick={() => setTab("productsTab")}>Products</button>
-              <button onClick={() => setTab("ordersTab")}>Orders</button>
+              <button
+                onClick={() => setTab("productsTab")}
+                className={tab === "productsTab" ? classes.activeTab : ""}
+              >
+                Products
+              </button>
+              <button
+                onClick={() => setTab("ordersTab")}
+                className={tab === "ordersTab" ? classes.activeTab : ""}
+              >
+                Orders
+              </button>
             </div>
           </div>
           {tab === "productsTab" && (
