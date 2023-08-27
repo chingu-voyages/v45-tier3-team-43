@@ -1,7 +1,7 @@
 import prisma from "@/app/libs/prismadb";
 
 interface IParams {
-  subdomain?: string;
+  subdomain: string;
 }
 
 export default async function getStoreById(params: IParams) {
