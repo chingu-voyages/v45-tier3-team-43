@@ -100,7 +100,7 @@
   font: inherit;
   font-size: 0.8rem;
   padding-inline: 0.5rem;
-  background-color: blue;
+  background-color: hsl(244, 42%, 36%);
   color: white;
   border: none;
   cursor: pointer;
