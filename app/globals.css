@@ -16,13 +16,11 @@ body,
   width: 100%;
   padding: 1rem;
   padding-top: 1.5rem;
-  font-weight: 300;
-  line-height: 1.5rem;
-  /* line-height: inherit; */
+  line-height: 1rem;
   font-family: inherit;
   font-size: 100%;
-  background-color: white;
-  border: 2px solid hsl(0, 0%, 83%);
+  background-color: rgba(255, 255, 255, 0.715);
+  border: none;
   border-radius: 0.375rem;
   outline: none;
   transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
@@ -61,7 +59,7 @@ body,
   left: 1rem;
   z-index: 10;
   transform-origin: 0;
-  color: hsl(240, 5%, 65%);
+  color: hsl(240, 2%, 38%);
   pointer-events: none;
 }
 
@@ -81,4 +79,16 @@ body,
   transform: scale(0.75) translateY(-1.25rem);
 }
 
+button {
+  background-color: #ffe601;
+  border: none;
+  padding: 1rem;
+  border-radius: 0.375rem;
+  font: inherit;
+  color: hsl(240, 2%, 38%);
+}
+
+button:hover {
+  background-color: #fefefef1;
+}
 /*  */
