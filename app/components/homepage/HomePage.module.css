@@ -1,13 +1,3 @@
-@font-face {
-  font-family: Visby;
-  src: url(./assets/VisbyHeavy.otf);
-}
-
-@font-face {
-  font-family: Visby-Reg;
-  src: url(./assets/VisbyRegular.otf);
-}
-
 .video {
   position: absolute;
   height: 100vh;
