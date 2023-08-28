@@ -1,10 +1,80 @@
+.video {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+  object-fit: cover;
+}
+
 .container {
-  padding: 3rem 0;
+  display: flex;
+  position: relative;
+  z-index: 9;
+  margin-top: 15%;
+  padding: 2rem;
+  font-family: Visby;
 }
 
 .container h1 {
-  color: blue;
+  color: rgb(31, 31, 31);
   width: fit-content;
   margin-inline: auto;
   margin-bottom: 3rem;
+}
+
+/*  ---- new css ----  */
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  color: rgb(242, 242, 242);
+  list-style: none;
+  justify-content: space-between;
+  position: relative;
+  z-index: 9;
+  padding: 10px;
+  font-family: visby;
+}
+
+.hptext {
+  color: whitesmoke;
+  font-size: 3.5rem;
+  width: 50%;
+  line-height: 1.2;
+  animation: slide-left-fade 4s;
+}
+
+@keyframes slide-left-fade {
+  from {
+    top: 200px;
+    opacity: 0;
+    transform: translateY(50%);
+  }
+
+  to {
+    top: 100px;
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@media (max-width: 440px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 9;
+    margin-top: 15%;
+    padding: 2rem;
+    font-family: Visby;
+    gap: 8rem;
+  }
+
+  .hptext {
+    color: whitesmoke;
+    font-size: 2.5rem;
+    width: 80%;
+    line-height: 1.2;
+    animation: slide-left-fade 4s;
+  }
 }

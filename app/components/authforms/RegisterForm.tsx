@@ -67,7 +67,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ toggleMode }) => {
         errors={errors}
         required
       />
-      <button type="submit">Continue</button>
+      <button style={{fontSize:"20px"}}type="submit">Continue</button>
       <div className={classes.switchModeOuter}>
         <div className={classes.switchModeInner}>
           <div>Already have an account?</div>
