@@ -23,7 +23,7 @@
   height: 2rem;
   font: inherit;
   padding-inline: 0.5rem;
-  background-color: blue;
+  background-color: hsl(244, 42%, 36%);
   color: white;
   border: none;
   cursor: pointer;
@@ -70,6 +70,7 @@
 }
 
 .lowerNav {
+  background-color: rgb(179, 197, 247);
   border-bottom: 1px solid black;
   padding: 2rem 1rem 1rem 1rem;
   display: flex;
@@ -77,6 +78,7 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  flex-shrink: 0;
 }
 
 .tabButtons {
@@ -93,14 +95,18 @@
   padding-inline: 0.5rem;
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid black;
+  /* border-bottom: 1px solid black; */
   color: black;
   cursor: pointer;
 }
 
+.tabButtons .activeTab {
+  border-bottom: 1px solid black;
+}
+
 .screen {
   width: 100%;
-  padding: 1rem 0.5rem 1rem 0.5rem;
+  padding: 1rem 0.5rem 2.5rem 0.5rem;
 }
 
 .screenHeading {
@@ -151,7 +157,7 @@
     flex-direction: row;
   }
   .lowerNav {
-    background-color: rgb(179, 197, 247);
+    /* background-color: rgb(179, 197, 247); */
     width: 14rem;
     border-bottom: none;
     border-right: 1px solid black;
