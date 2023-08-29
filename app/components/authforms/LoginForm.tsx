@@ -46,7 +46,9 @@ const LoginForm: React.FC<LoginFormProps> = ({ toggleMode }) => {
 
   return (
     <form onSubmit={handleSubmit(submitHandler)} className={classes.form}>
-      <h2 style={{fontSize:"1.3rem" , fontFamily:"Visby"}}>Let's get started!</h2>
+      <h2 style={{ fontSize: "1.3rem", fontFamily: "Visby" }}>
+        Let&apos;s get started!
+      </h2>
       <Input
         id="email"
         label="Email"

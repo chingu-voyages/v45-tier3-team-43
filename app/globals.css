@@ -1,3 +1,13 @@
+@font-face {
+  font-family: Visby;
+  src: url("/assets/VisbyHeavy.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Visby-Reg;
+  src: url("/assets/VisbyRegular.otf") format("opentype");
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

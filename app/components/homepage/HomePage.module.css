@@ -1,4 +1,13 @@
-.video {
+.videoLarge {
+  display: none;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+  object-fit: cover;
+}
+
+.videoSmall {
   position: absolute;
   height: 100vh;
   width: 100%;
@@ -76,5 +85,14 @@
     width: 80%;
     line-height: 1.2;
     animation: slide-left-fade 4s;
+  }
+}
+
+@media (min-width: 440px) {
+  .videoLarge {
+    display: block;
+  }
+  .videoSmall {
+    display: none;
   }
 }
