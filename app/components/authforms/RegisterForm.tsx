@@ -41,7 +41,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ toggleMode }) => {
 
   return (
     <form onSubmit={handleSubmit(submitHandler)} className={classes.form}>
-      <h2>Register</h2>
+      <h2 style={{ fontSize: "1.3rem", fontFamily: "Visby" }}>Register</h2>
       <Input
         id="email"
         label="Email"
@@ -67,7 +67,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ toggleMode }) => {
         errors={errors}
         required
       />
-      <button style={{fontSize:"20px"}}type="submit">Continue</button>
+      <button type="submit">Continue</button>
       <div className={classes.switchModeOuter}>
         <div className={classes.switchModeInner}>
           <div>Already have an account?</div>

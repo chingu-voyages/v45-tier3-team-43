@@ -23,48 +23,34 @@ const HomePage: React.FC<HomePageProps> = ({ currentUser }) => {
   }, []);
 
   return (
-    <section className={classes.hpsection}>
+    <div className={classes.hp}>
       <video
-        className={classes.videoLarge}
+        className={classes.video}
         playsInline
         autoPlay
         muted
         loop
         id="video"
         src="/assets/dsk-video.mp4"
-      >
-        {/* <source src="/assets/dsk-video.mp4" type="video/mp4" /> */}
-      </video>
-      <video
-        className={classes.videoSmall}
-        playsInline
-        autoPlay
-        muted
-        loop
-        id="video"
-        src="/assets/fv-mb-clip1.mp4"
-      >
-        {/* <source src="/assets/fv-mb-clip1.mp4" type="video/mp4" /> */}
-      </video>
-      <nav className={classes.nav}>
-        <li>Fashion Vista</li>
-        <li>Log In</li>
-      </nav>
+      ></video>
+      <h1>FashionVista</h1>
       <div className={classes.container}>
-        <div className={classes.hptext}>
-          <span style={{ color: "#ffe601" }}>Connect</span> With Shoppers
-          Anywhere at Anytime.
-          <div style={{ fontSize: "1.3rem", fontFamily: "Visby-Reg" }}>
-            Create your online store with Fashion Vista.
-          </div>
+        <div className={classes.text}>
+          <p className={classes.mainText}>
+            <span>Connect</span> with Shoppers Anywhere at Anytime
+          </p>
+          <p style={{ fontSize: "1.25rem", fontFamily: "Visby-Reg" }}>
+            Create your online store with FashionVista
+          </p>
         </div>
+
         {loginMode ? (
           <LoginForm toggleMode={toggleMode} />
         ) : (
           <RegisterForm toggleMode={toggleMode} />
         )}
       </div>
-    </section>
+    </div>
   );
 };
 export default HomePage;
