@@ -1,3 +1,13 @@
+@font-face {
+  font-family: Visby;
+  src: url("/assets/VisbyHeavy.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Visby-Reg;
+  src: url("/assets/VisbyRegular.otf") format("opentype");
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -19,8 +29,9 @@ body,
   line-height: 1rem;
   font-family: inherit;
   font-size: 100%;
+  border: 2px solid hsl(0, 0%, 83%);
   background-color: rgba(255, 255, 255, 0.715);
-  border: none;
+  /* border: none; */
   border-radius: 0.375rem;
   outline: none;
   transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
@@ -79,16 +90,4 @@ body,
   transform: scale(0.75) translateY(-1.25rem);
 }
 
-button {
-  background-color: #ffe601;
-  border: none;
-  padding: 1rem;
-  border-radius: 0.375rem;
-  font: inherit;
-  color: hsl(240, 2%, 38%);
-}
-
-button:hover {
-  background-color: #fefefef1;
-}
 /*  */
