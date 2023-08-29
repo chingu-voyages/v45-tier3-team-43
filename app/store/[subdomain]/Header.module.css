@@ -25,6 +25,8 @@
 
   .input {
     border: none;
+    outline: none;
+    border: none;
   }
 }
 

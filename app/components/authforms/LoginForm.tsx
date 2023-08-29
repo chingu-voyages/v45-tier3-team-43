@@ -31,8 +31,6 @@ const LoginForm: React.FC<LoginFormProps> = ({ toggleMode }) => {
       ...data,
       redirect: false,
     }).then((callback) => {
-      setIsLoading(false);
-
       if (callback?.ok) {
         toast.success("Logged in");
         router.push("/dashboard");
@@ -41,6 +39,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ toggleMode }) => {
       if (callback?.error) {
         toast.error(callback.error);
       }
+      setIsLoading(false);
     });
   };
 
@@ -66,7 +65,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ toggleMode }) => {
         errors={errors}
         required
       />
-      <button type="submit">Continue</button>
+      <button type="submit">{isLoading ? 'connecting ...': 'Continue'}</button>
       <div className={classes.switchModeOuter}>
         <div className={classes.switchModeInner}>
           <div>First time using FashionVista?</div>
