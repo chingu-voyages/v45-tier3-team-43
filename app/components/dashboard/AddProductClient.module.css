@@ -4,18 +4,6 @@
   text-align: center;
 }
 
-.backButton {
-  width: fit-content;
-  height: 2rem;
-  font: inherit;
-  padding-inline: 0.5rem;
-  background-color: blue;
-  color: white;
-  border: none;
-  cursor: pointer;
-  margin-bottom: 3rem;
-}
-
 .inputs {
   max-width: 36rem;
   margin-inline: auto;
