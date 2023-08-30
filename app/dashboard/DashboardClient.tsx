@@ -7,19 +7,22 @@ import { toast } from "react-hot-toast";
 import { useState } from "react";
 import Input from "../components/inputs/Input";
 import { useRouter } from "next/navigation";
-import { Product, Store } from "@prisma/client";
+import { Banner, Product, Store } from "@prisma/client";
 import classes from "./DashboardClient.module.css";
 import ProductsList from "../components/dashboard/ProductsList";
 import AddProductClient from "../components/dashboard/AddProductClient";
+import BannerForm from "../components/dashboard/BannerForm";
 
 interface DashboardClientProps {
   store: Store | null;
   products: Product[] | null;
+  banner: Banner | null;
 }
 
 const DashboardClient: React.FC<DashboardClientProps> = ({
   store,
   products,
+  banner,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [tab, setTab] = useState("productsTab");
@@ -129,21 +132,30 @@ const DashboardClient: React.FC<DashboardClientProps> = ({
                 Create a Store
               </button>
             )}
-            <div className={classes.tabButtons}>
-              <button
-                onClick={() => setTab("productsTab")}
-                className={tab === "productsTab" ? classes.activeTab : ""}
-              >
-                Products
-              </button>
-              <button
-                onClick={() => setTab("ordersTab")}
-                className={tab === "ordersTab" ? classes.activeTab : ""}
-              >
-                Orders
-              </button>
-            </div>
+            {store && (
+              <div className={classes.tabButtons}>
+                <button
+                  onClick={() => setTab("productsTab")}
+                  className={tab === "productsTab" ? classes.activeTab : ""}
+                >
+                  Products
+                </button>
+                <button
+                  onClick={() => setTab("ordersTab")}
+                  className={tab === "ordersTab" ? classes.activeTab : ""}
+                >
+                  Orders
+                </button>
+                <button
+                  onClick={() => setTab("bannerTab")}
+                  className={tab === "bannerTab" ? classes.activeTab : ""}
+                >
+                  Store Banner
+                </button>
+              </div>
+            )}
           </div>
+
           {tab === "productsTab" && (
             <div className={classes.screen}>
               <div className={classes.screenHeading}>
@@ -169,6 +181,8 @@ const DashboardClient: React.FC<DashboardClientProps> = ({
               )}
             </div>
           )}
+
+          {tab === "bannerTab" && <BannerForm store={store} banner={banner} />}
         </div>
       )}
     </div>
