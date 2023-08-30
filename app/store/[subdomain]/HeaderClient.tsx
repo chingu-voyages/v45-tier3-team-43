@@ -7,21 +7,26 @@ interface HeaderClientProps {
   store: Store | null;
 }
 
-const HeaderClient: React.FC<HeaderClientProps> = ({
-  store
-}) => {
- return (
-  <div className={classes.header}>
-    <div className={classes.companyName}>{store?.name}</div>
-    <div className={classes.shopping}>
-      <div><BiShoppingBag size={30}/></div>
-      <div className={classes.inputContainer}>
-        <input className={classes.input} type="text" placeholder="Search products..." />
-        <LiaSearchSolid />
+const HeaderClient: React.FC<HeaderClientProps> = ({ store }) => {
+  return (
+    <div className={classes.header}>
+      <div className={classes.companyName}>{store?.name}</div>
+      <div className={classes.shopping}>
+        <div>
+          <BiShoppingBag size={30} />
+        </div>
+        <div className={classes.inputContainer}>
+          <input
+            className={classes.input}
+            type="text"
+            placeholder="Search products..."
+            id="search"
+          />
+          <LiaSearchSolid />
+        </div>
       </div>
     </div>
-  </div>
- )
+  );
 };
 
 export default HeaderClient;

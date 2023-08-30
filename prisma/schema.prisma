@@ -22,6 +22,7 @@ model User {
 
   store Store?
   products Product[]
+  banner Banner?
 }
 
 model Store {
@@ -34,6 +35,7 @@ model Store {
   userId String @db.ObjectId @unique
 
   products Product[]
+  banner Banner?
 
   // line below creates a relation with the User using the userId field and 
   // it references the User model id field
@@ -49,6 +51,20 @@ model Product {
   createdAt DateTime @default(now())
   userId String @db.ObjectId
   storeId String @db.ObjectId
+
+  // line below creates a relation with the User using the userId field and 
+  // it references the User model id field
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  store Store @relation(fields: [storeId], references: [id], onDelete: Cascade)
+}
+
+model Banner {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  bannerText String
+  bannerImage String
+  createdAt DateTime @default(now())
+  userId String @db.ObjectId @unique
+  storeId String @db.ObjectId @unique
 
   // line below creates a relation with the User using the userId field and 
   // it references the User model id field

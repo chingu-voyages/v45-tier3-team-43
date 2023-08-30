@@ -93,7 +93,9 @@ const AddProductClient = () => {
             formatPrice
           />
         </div>
-        <p className={classes.note}>Note: first image added is main image!</p>
+        <p className={classes.note}>
+          <b>Note:</b> first image added is main image!
+        </p>
         <div className={classes.imageUploads}>
           <ImageUpload
             value={images[0]}

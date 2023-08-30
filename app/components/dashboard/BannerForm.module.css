@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
   text-align: center;
 }
 
@@ -16,6 +16,8 @@
 
 .note {
   margin-bottom: 1rem;
+  max-width: 600px;
+  margin-inline: auto;
 }
 
 .imageUploads {
@@ -39,4 +41,25 @@
   border: none;
   cursor: pointer;
   margin-inline: auto;
+}
+
+.delete p {
+  margin-bottom: 3rem;
+}
+
+.delete button {
+  width: fit-content;
+  height: 2rem;
+  font: inherit;
+  padding-inline: 0.5rem;
+  background-color: hsl(244, 42%, 36%);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .delete button:hover {
+    opacity: 0.8;
+  }
 }

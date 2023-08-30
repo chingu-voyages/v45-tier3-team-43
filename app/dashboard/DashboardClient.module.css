@@ -83,13 +83,14 @@
 
 .tabButtons {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
 }
 
 .tabButtons > button {
-  width: 6rem;
+  width: 8rem;
   height: 2rem;
   font: inherit;
   padding-inline: 0.5rem;
@@ -135,6 +136,12 @@
   .cancelFormButton:hover,
   .addProductButton:hover {
     opacity: 0.8;
+  }
+}
+
+@media (min-width: 500px) {
+  .tabButtons {
+    flex-direction: row;
   }
 }
 
