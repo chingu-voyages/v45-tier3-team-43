@@ -16,7 +16,7 @@ const BannerClient: React.FC<BannerClientProps> = ({ banner }) => {
         alt="Banner Image"
         className={classes.image}
         sizes="(width: 100%)"
-        priority={false}
+        priority
       />
       <div className={classes.bannerContent}>
         <div className={classes.mainContent}>

@@ -20,6 +20,7 @@ const HeaderClient: React.FC<HeaderClientProps> = ({ store }) => {
             className={classes.input}
             type="text"
             placeholder="Search products..."
+            id="search"
           />
           <LiaSearchSolid />
         </div>
