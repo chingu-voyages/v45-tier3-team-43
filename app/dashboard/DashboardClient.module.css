@@ -83,6 +83,7 @@
 
 .tabButtons {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
@@ -135,6 +136,12 @@
   .cancelFormButton:hover,
   .addProductButton:hover {
     opacity: 0.8;
+  }
+}
+
+@media (min-width: 500px) {
+  .tabButtons {
+    flex-direction: row;
   }
 }
 
