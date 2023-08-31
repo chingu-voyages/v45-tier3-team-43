@@ -1,22 +1,40 @@
 import React from 'react'
 
+import Image from "next/image";
+
 import { Product } from "@prisma/client";
 import formatCurrency from "@/app/components/ui/formatCurrency"
+import classes from "./ShoppingCart.module.css";
 
 interface CartItemProps {
-    item:  Product ;
-  }
+  product: Product;
+}
 
 
 const CartItem: React.FC<CartItemProps> = ({
-item }) => {
+  product }) => {
   return (
-    <div  >
-    <h3>{item.title}</h3>
-    <div>{formatCurrency(item.price)}</div>
-    <div>{item.description}</div>
-    <div><span>QTY: </span></div>
-</div>
+    <div className={classes.individualitem}>
+
+      <Image
+        src={product.images[0]}
+        width={80}
+        height={80}
+        alt='image alt text'
+        className={classes.itemImage}
+      />
+
+
+      <div className={classes.itemDescription}>
+        <h3>{product.title}</h3>
+        <div>{formatCurrency(product.price)}</div>
+        <div>{product.description}</div>
+        <div>
+          <button>+</button>
+          <span>QTY: 1</span>
+          <button>-</button></div>
+      </div>
+    </div>
   )
 }
 

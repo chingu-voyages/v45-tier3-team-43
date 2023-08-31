@@ -12,7 +12,7 @@ const Cart = async () => {
             title: 'red shirt with super cool logo and two pockets and some long title',
             description: 'S',
             price: 20,
-            images: [],
+            images: ["/assets/images/shopping-bag.svg"],
             createdAt: new Date(),
             userId: '2',
             storeId: '3'
@@ -22,7 +22,7 @@ const Cart = async () => {
             title: 'blue jacket',
             description: 'M',
             price: 40,
-            images: [],
+            images: ["/assets/images/shopping-bag.svg"],
             createdAt: new Date(),
             userId: '2',
             storeId: '3'
@@ -32,7 +32,7 @@ const Cart = async () => {
             title: 'green hat',
             description: 'onesize',
             price: 12.99,
-            images: [],
+            images: ["/assets/images/shopping-bag.svg"],
             createdAt: new Date(),
             userId: '2',
             storeId: '3'

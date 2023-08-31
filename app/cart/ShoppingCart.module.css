@@ -38,13 +38,34 @@
 }
 
 
-
-
-
-
 .items {
-  padding:  0 0 0 2rem;
+  padding-left:  2rem;
 }
+
+.individualitem {
+  margin: 12px 0;
+  padding:  0 0 ;
+  display: flex;
+  /* position: 'relative' */
+ 
+}
+
+.itemDescription{
+  overflow-wrap: break-word;
+
+}
+.itemImage {
+  margin-right: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color:#fa6e20;
+  border-style: solid;
+}
+
+
+
+/* 
+
 
 
 
@@ -82,7 +103,7 @@
 .itemImage {
   filter: brightness(90%);
   object-fit: cover;
-  /* position: relative !important; */
+  position: relative !important;
 }
 
 .expand,
@@ -97,7 +118,7 @@
   background-color: white;
   border-radius: 50%;
   color: black;
-  /* display: flex; */
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -128,4 +149,4 @@
     display: flex;
   }
 }
-
+ */

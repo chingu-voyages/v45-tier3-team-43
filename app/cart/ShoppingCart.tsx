@@ -22,7 +22,7 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({
         {data.length === 0 && (<p>no items in cart</p>)}
         <div className={classes.items}>
           {data.map((item) => {
-            return <CartItem item={item} key={item.id} />
+            return <CartItem product={item} key={item.id}/>
           })}
         </div>
         {data.length !== 0 &&
