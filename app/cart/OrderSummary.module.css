@@ -1,0 +1,10 @@
+
+.button {
+    color:  white;
+    letter-spacing: 3px;
+    border: none;
+    box-shadow: #beb9b9;
+    background-color: #fa6e20;
+    padding: 9px 40px 9px 9px;
+    font-weight: bold;
+  }
