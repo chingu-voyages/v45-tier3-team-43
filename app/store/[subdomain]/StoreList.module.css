@@ -1,5 +1,7 @@
 .storeList {
   width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
   padding-bottom: 2rem;
 }
 
@@ -64,7 +66,7 @@
 
 @media (min-width: 1075px) {
   .storeItems {
-    max-width: 1175px;
+    max-width: 1440px;
     grid-template-columns: repeat(5, 1fr);
     column-gap: 1.5rem;
     row-gap: 3rem;
