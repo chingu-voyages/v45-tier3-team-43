@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react'
 
 import Image from "next/image";
@@ -8,11 +10,13 @@ import classes from "./ShoppingCart.module.css";
 
 interface CartItemProps {
   product: Product;
+  onMinusOne;
+  onPlusOne
 }
 
 
 const CartItem: React.FC<CartItemProps> = ({
-  product }) => {
+  product, onMinusOne, onPlusOne }) => {
   return (
     <div className={classes.individualitem}>
 
@@ -24,17 +28,16 @@ const CartItem: React.FC<CartItemProps> = ({
         className={classes.itemImage}
       />
 
-
       <div className={classes.itemDescription}>
         <h3>{product.title}</h3>
         <div>{formatCurrency(product.price)}</div>
         <div>{product.description}</div>
         <div>
           <span>QTY:</span>
-          <button className={classes.button}>-</button>
-          <span>1</span>
-          <button className={classes.button}>+</button>
-          </div>
+          <button className={classes.button} onClick={onMinusOne}>-</button>
+          <span>{product.quantity}</span>
+          <button className={classes.button} onClick={onPlusOne}>+</button>
+        </div>
       </div>
     </div>
   )

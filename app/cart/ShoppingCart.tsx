@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react'
 
 import { Product } from "@prisma/client";
@@ -12,9 +14,25 @@ interface ShoppingCartProps {
   shipping: number
 }
 
-
 const ShoppingCart: React.FC<ShoppingCartProps> = ({
   data, tax, shipping }) => {
+
+
+
+  function handleMinusOne() {
+    alert('clicked Minus One quantity')
+  }
+
+  function handlePlusOne() {
+    alert('clicked Plus One quantity')
+  }
+
+
+  const itemTotal =
+    data.reduce(function (acc, obj) {
+      return acc + (obj.price * obj.quantity);
+    }, 0)
+
   return (
     <div  >
       <h2 className={classes.heading}>SHOPPING CART</h2>
@@ -22,11 +40,11 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({
         {data.length === 0 && (<p>no items in cart</p>)}
         <div className={classes.items}>
           {data.map((item) => {
-            return <CartItem product={item} key={item.id}/>
+            return <CartItem product={item} key={item.id} onMinusOne={handleMinusOne} onPlusOne={handlePlusOne} />
           })}
         </div>
         {data.length !== 0 &&
-          (<div> <OrderSummary tax={tax} shipping={shipping} prices={[15, 13]} /></div>)}
+          (<div> <OrderSummary itemTotal={itemTotal} tax={tax} shipping={shipping} prices={[15, 13]} /></div>)}
       </div>
     </div>
   )

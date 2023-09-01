@@ -15,7 +15,8 @@ const Cart = async () => {
             images: ["/assets/images/shopping-bag.svg"],
             createdAt: new Date(),
             userId: '2',
-            storeId: '3'
+            storeId: '3',
+            quantity:10
         },
         {
             id: '4',
@@ -25,7 +26,8 @@ const Cart = async () => {
             images: ["/assets/images/shopping-bag.svg"],
             createdAt: new Date(),
             userId: '2',
-            storeId: '3'
+            storeId: '3',
+            quantity:5
         },
         {
             id: '9',
@@ -35,7 +37,8 @@ const Cart = async () => {
             images: ["/assets/images/shopping-bag.svg"],
             createdAt: new Date(),
             userId: '2',
-            storeId: '3'
+            storeId: '3',
+            quantity:1
         }
     ]
 

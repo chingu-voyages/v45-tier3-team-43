@@ -46,12 +46,7 @@
   margin: 12px 0;
   padding:  0 0 ;
   display: flex;
-  /* position: 'relative' */
   align-items:center;
-        /* justify-content:center; */
-        /* text-align: center; */
-
- 
 }
 
 .itemDescription{
@@ -63,11 +58,8 @@
   border-radius: 10px;
   overflow: hidden;
   background-color:#fa6e20;
-  /* border-style: solid; */
   flex-shrink: 0;
-
 }
-
 
 .button {
   border: none;
@@ -76,18 +68,13 @@
   padding: 4px 8px;
   margin: 0 6px;
   border-radius: 3px;
-
 }
-
 
 @media (hover: hover) {
   .button:hover {
   background-color: #F0F0F0;
-
 }
-  
 }
-
 /* 
 
 

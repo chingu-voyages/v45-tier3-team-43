@@ -8,38 +8,45 @@ import classes from "./OrderSummary.module.css";
 
 
 interface OrderSummaryProps {
-  prices: number[];
   tax: number,
-  shipping: number
+  shipping: number,
+  itemTotal:number
 }
 
 
 const OrderSummary: React.FC<OrderSummaryProps> = ({
-  prices, tax, shipping }) => {
+  itemTotal, tax, shipping }) => {
 
-    function handleSubmit (){
-      alert('clicked checkout')
-    }
+  function handleSubmit() {
+    alert('clicked checkout')
+  }
+
+const orderTotal = (itemTotal+ shipping)*(1+(tax/100))
 
   return (
-    <div>
+    <>
       <h2>ORDER SUMMARY</h2>
-      <div>
-        <div>ITEM TOTAL</div>
-        <div>{formatCurrency(45.99)}</div>
-      </div>
-      <div>
-        <div>SHIPPING</div>
-        <div>{formatCurrency(shipping)}</div>
-      </div>
-      <div>
-        <div>TAX</div>
-        <div>{formatCurrency(tax)}</div>
-      </div>
-          
-      <button className={classes.button} onClick={handleSubmit}>CHECKOUT</button>
-    </div>
+      <div className={classes.content}>
+        <div>
+          <div>ITEM TOTAL</div>
+          <div>{formatCurrency(itemTotal)}</div>
+        </div>
+        <div>
+          <div>SHIPPING</div>
+          <div>{formatCurrency(shipping)}</div>
+        </div>
+        <div>
+          <div>TAX ({tax}%)</div>
+          <div>{formatCurrency((itemTotal+shipping)*tax/100)}</div>
+        </div>
+        <div>
+          <div>TOTAL</div>
+          <div>{formatCurrency(orderTotal)}</div>
+        </div>
 
+        <button className={classes.button} onClick={handleSubmit}>CHECKOUT</button>
+      </div>
+    </>
   )
 }
 
