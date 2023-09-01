@@ -12,14 +12,46 @@
 }
 
 .heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-items: center; */
+  margin-bottom: 1.5rem;
+}
+
+.headingTitle {
   border-left: 3px solid #fa6e20;
   padding-left: 10px;
+  font-family: Visby-Reg;
   font-weight: 400;
   font-size: 32px;
   line-height: 30px;
-  font-family: Jaldi;
   margin: 30px 0;
 }
+
+.inputContainer {
+  width: 12rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  border: 1px solid #beb9b9;
+  padding: 5px 5px 5px 0.8rem;
+  border-radius: 15px;
+  align-self: center;
+}
+
+.input {
+  width: 90%;
+  border: none;
+  outline: none;
+  padding-right: 0.5rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* .inputContainer svg {
+  width: 1.5rem;
+} */
 
 .storeItems {
   width: 100%;
@@ -27,7 +59,7 @@
   margin-inline: auto;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  column-gap: 1.5rem;
+  /* column-gap: 1.5rem; */
   row-gap: 3rem;
 }
 
@@ -90,19 +122,176 @@
   color: rgb(10, 163, 10);
 }
 
+/* Modal Styling */
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background-color: #575757;
+  opacity: 0.6;
+}
+
+.modal {
+  position: fixed;
+  top: 2.5vh;
+  left: 0;
+  left: 2.5%;
+  width: 95%;
+  max-width: 95%;
+  height: 95vh;
+  border-radius: 1rem;
+  background-color: white;
+  z-index: 6;
+  padding: 1rem 0.5rem;
+  overflow-y: scroll;
+}
+
+.modal > div {
+  /* border: 1px solid #ccc; */
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: flex-start;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.modal::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.modal {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.modalImages {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.modalImageContainer {
+  height: 14rem;
+  width: 12rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.close {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem;
+}
+
+.close > svg {
+  cursor: pointer;
+}
+
+.modalTitle {
+  /* color: #033dfd; */
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  display: block;
+  word-break: break-word;
+}
+
+.modalPrice {
+  color: rgb(10, 163, 10);
+  margin-bottom: 0.6rem;
+  display: block;
+}
+
+.modal hr {
+  margin-bottom: 1rem;
+}
+
+.description {
+  /* background-color: #aef8ee; */
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  word-break: break-word;
+}
+
+.modalCartButton {
+  background-color: black;
+  color: white;
+  border-radius: 1.5rem;
+  width: fit-content;
+  height: 2.25rem;
+  padding: 0 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+/*  */
+
 @media (hover: hover) {
   .storeItem:hover .expand,
   .storeItem:hover .cart {
     display: flex;
   }
+  .expand:hover,
+  .cart:hover {
+    background-color: black;
+    color: white;
+  }
+  .modalCartButton:hover {
+    background-color: rgb(36, 12, 253);
+  }
+  .close > svg:hover {
+    color: rgb(36, 12, 253);
+  }
+}
+
+@media (min-width: 375px) {
+  .modalTitle {
+    font-size: 1.5rem;
+  }
+  .description {
+    font-size: 1rem;
+  }
 }
 
 @media (min-width: 500px) {
+  .heading {
+    flex-direction: row;
+    align-items: center;
+  }
   .storeItems {
-    max-width: 525px;
+    max-width: 500px;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 1.5rem;
     row-gap: 3rem;
+  }
+  .modal {
+    padding: 1rem 1.25rem;
+  }
+  .modalImages {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 684px) {
+  .modal {
+    padding: 1rem 1.25rem;
+    max-width: 650px;
+    left: calc(50% - 325px);
+    max-height: 650px;
   }
 }
 

@@ -22,12 +22,6 @@ const BannerClient: React.FC<BannerClientProps> = ({ banner }) => {
         <div className={classes.mainContent}>
           {banner?.bannerText || "Explore our latest products!"}
         </div>
-        {/* <p className={classes.subContent}>
-          Take advantage of today&apos;s promotions with a variety of attractive
-          offers such as discounts and exclusive offers. Get it soon before it
-          runs out!
-        </p> */}
-        <button className={classes.button}>Grab Now</button>
       </div>
     </div>
   );
