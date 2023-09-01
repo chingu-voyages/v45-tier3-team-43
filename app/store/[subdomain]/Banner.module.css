@@ -32,23 +32,6 @@
   margin-bottom: 2rem;
 }
 
-.subContent {
-  width: 50%;
-  font-size: 16px;
-  font-weight: normal;
-  margin-bottom: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.button {
-  border: none;
-  box-shadow: #beb9b9;
-  color: #3c3c3c;
-  padding: 12px 20px;
-  font-weight: bold;
-  border-radius: 15px;
-}
-
 @media (min-width: 325px) {
   .mainContent {
     font-size: 1.5rem;
