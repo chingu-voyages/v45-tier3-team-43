@@ -1,0 +1,41 @@
+.title,
+.mainTitle {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.mainTitle {
+  margin-top: 2rem;
+}
+
+.button {
+  font-weight: bold;
+  font: inherit;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border: none;
+  box-shadow: #beb9b9;
+  background-color: #fa6e20;
+  padding: 9px 40px 9px 9px;
+  margin-top: 14px;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .button:hover {
+    background-color: #f89865;
+  }
+}
+
+.content {
+  padding-left: 1rem;
+}
+
+.summaryDivs {
+  margin: 6px 0;
+}
+
+.totalDiv {
+  margin-top: 20px;
+}
