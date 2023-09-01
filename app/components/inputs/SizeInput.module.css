@@ -1,0 +1,29 @@
+.selected,
+.unselected {
+  border-radius: 0.75rem;
+  padding: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.unselected {
+  border: 2px solid hsl(0, 0%, 90%);
+}
+
+.selected {
+  border: 2px solid hsl(0, 0%, 0%);
+}
+
+.label {
+  font-weight: 600;
+}
+
+@media (hover: hover) {
+  .selected:hover,
+  .unselected:hover {
+    border-color: black;
+  }
+}
