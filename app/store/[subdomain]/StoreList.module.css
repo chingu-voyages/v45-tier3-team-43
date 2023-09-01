@@ -222,19 +222,56 @@
   word-break: break-word;
 }
 
+.description span {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.modalColor {
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.modalColor span {
+  text-transform: lowercase;
+  font-weight: 400;
+  word-break: break-word;
+  font-size: 0.8rem;
+}
+
+.section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.modalSize {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.modalSize span {
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
 .modalCartButton {
   background-color: black;
   color: white;
   border-radius: 1.5rem;
   width: fit-content;
   height: 2.25rem;
-  padding: 0 0.8rem;
+  padding: 0 0.6rem;
+  font-size: 0.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.6rem;
   cursor: pointer;
-  margin-bottom: 1rem;
 }
 
 /*  */
@@ -261,7 +298,13 @@
   .modalTitle {
     font-size: 1.5rem;
   }
-  .description {
+  .description,
+  .description span,
+  .modalColor,
+  .modalColor span,
+  .modalSize,
+  .modalSize span,
+  .modalCartButton {
     font-size: 1rem;
   }
 }
