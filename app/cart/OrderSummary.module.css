@@ -1,16 +1,29 @@
 
 .button {
+  font-weight: bold;
     color:  white;
     letter-spacing: 3px;
     border: none;
     box-shadow: #beb9b9;
     background-color: #fa6e20;
     padding: 9px 40px 9px 9px;
-    font-weight: bold;
+    margin-top: 14px;
   }
 
+  @media (hover: hover) {
+    .button:hover {
+    background-color: #f89865;
+  }
+  }
 
-  
 .content {
   padding-left:  1rem;
+}
+
+
+.divGroups {
+  margin: 3px 0;
+  /* padding:  0 0 ; */
+  /* display: flex; */
+  /* align-items:center; */
 }

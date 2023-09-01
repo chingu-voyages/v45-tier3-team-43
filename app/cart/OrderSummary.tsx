@@ -27,19 +27,19 @@ const orderTotal = (itemTotal+ shipping)*(1+(tax/100))
     <>
       <h2>ORDER SUMMARY</h2>
       <div className={classes.content}>
-        <div>
+        <div className={classes.divGroups}>
           <div>ITEM TOTAL</div>
           <div>{formatCurrency(itemTotal)}</div>
         </div>
-        <div>
+        <div className={classes.divGroups}>
           <div>SHIPPING</div>
           <div>{formatCurrency(shipping)}</div>
         </div>
-        <div>
+        <div className={classes.divGroups}>
           <div>TAX ({tax}%)</div>
           <div>{formatCurrency((itemTotal+shipping)*tax/100)}</div>
         </div>
-        <div>
+        <div className={classes.divGroups}>
           <div>TOTAL</div>
           <div>{formatCurrency(orderTotal)}</div>
         </div>
