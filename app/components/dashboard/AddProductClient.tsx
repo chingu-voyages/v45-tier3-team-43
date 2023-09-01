@@ -8,6 +8,34 @@ import axios from "axios";
 import { toast } from "react-hot-toast";
 import classes from "./AddProductClient.module.css";
 import ImageUpload from "../inputs/ImageUpload";
+import SizeInput from "../inputs/SizeInput";
+
+export const sizes = [
+  {
+    label: "XXS",
+  },
+  {
+    label: "XS",
+  },
+  {
+    label: "S",
+  },
+  {
+    label: "M",
+  },
+  {
+    label: "L",
+  },
+  {
+    label: "XL",
+  },
+  {
+    label: "2XL",
+  },
+  {
+    label: "3XL",
+  },
+];
 
 const AddProductClient = () => {
   const router = useRouter();
@@ -24,23 +52,35 @@ const AddProductClient = () => {
     defaultValues: {
       title: "",
       description: "",
+      color: "",
+      size: "",
       price: 1,
       images: [],
     },
   });
 
+  const size = watch("size");
   let images = watch("images");
 
   // console.log(images);
 
   //created setCustomValue because setValue doesn't rerender the page
   const setCustomValue = (id: string, value: any) => {
-    images = [...images, value];
-    setValue(id, images, {
-      shouldDirty: true,
-      shouldTouch: true,
-      shouldValidate: true,
-    });
+    if (id === "images") {
+      images = [...images, value];
+
+      setValue(id, images, {
+        shouldDirty: true,
+        shouldTouch: true,
+        shouldValidate: true,
+      });
+    } else {
+      setValue(id, value, {
+        shouldDirty: true,
+        shouldTouch: true,
+        shouldValidate: true,
+      });
+    }
   };
 
   // console.log(images);
@@ -83,6 +123,25 @@ const AddProductClient = () => {
             errors={errors}
             required
           />
+          <Input
+            id="color"
+            label="Color"
+            disabled={isLoading}
+            register={register}
+            errors={errors}
+            required
+          />
+          <div className={classes.sizeInputs}>
+            {sizes.map((item) => (
+              <div key={item.label} className={classes.sizeInput}>
+                <SizeInput
+                  onClick={(size) => setCustomValue("size", size)}
+                  selected={size === item.label}
+                  label={item.label}
+                />
+              </div>
+            ))}
+          </div>
           <Input
             id="price"
             label="Price"
