@@ -46,6 +46,8 @@ model Product {
   id String @id @default(auto()) @map("_id") @db.ObjectId
   title String
   description String
+  color String
+  size String
   price Int
   images String[]
   createdAt DateTime @default(now())
