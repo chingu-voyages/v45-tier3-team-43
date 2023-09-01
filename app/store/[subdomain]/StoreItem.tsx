@@ -7,6 +7,8 @@ import { BiExpand } from "react-icons/bi";
 import { LuShoppingCart } from "react-icons/lu";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { useState } from "react";
+import { useParams } from "next/navigation";
+import { toast } from "react-hot-toast";
 
 interface StoreItemProps {
   product: Product;
@@ -15,6 +17,27 @@ interface StoreItemProps {
 const StoreItem: React.FC<StoreItemProps> = ({ product }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalProduct, setModalProduct] = useState<Product | null>(null);
+
+  const params = useParams();
+
+  // console.log(params?.subdomain);
+
+  const addToCart = (product: Product) => {
+    const cart = localStorage.getItem(params?.subdomain as string);
+    if (cart) {
+      const cartData = JSON.parse(cart);
+      localStorage.setItem(
+        params?.subdomain as string,
+        JSON.stringify([...cartData, product])
+      );
+    } else {
+      localStorage.setItem(
+        params?.subdomain as string,
+        JSON.stringify([product])
+      );
+    }
+    toast.success("Added to Cart!");
+  };
 
   return (
     <>
@@ -28,7 +51,7 @@ const StoreItem: React.FC<StoreItemProps> = ({ product }) => {
             priority={false}
             className={classes.itemImage}
           />
-          <div className={classes.cart}>
+          <div className={classes.cart} onClick={() => addToCart(product)}>
             <LuShoppingCart size={16} />
           </div>
           <div
@@ -74,7 +97,10 @@ const StoreItem: React.FC<StoreItemProps> = ({ product }) => {
                 </p>
                 <hr />
                 <div className={classes.section}>
-                  <div className={classes.modalCartButton}>
+                  <div
+                    className={classes.modalCartButton}
+                    onClick={() => addToCart(product)}
+                  >
                     Add to Cart <LuShoppingCart size={20} />
                   </div>
                   <div className={classes.modalSize}>

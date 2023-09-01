@@ -1,15 +1,9 @@
-
-
-import React from 'react'
-
-
 function formatCurrency(val: number) {
-      const currency=   new Intl.NumberFormat("en-US", {
-            style: "currency",
-            currency: "USD",
-        }).format(val)
-        return ("US" + currency)
-    
+  const currency = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+  }).format(val);
+  return "US" + currency;
 }
 
-export default formatCurrency
+export default formatCurrency;
