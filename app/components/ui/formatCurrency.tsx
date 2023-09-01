@@ -4,11 +4,11 @@ import React from 'react'
 
 
 function formatCurrency(val: number) {
-       return new Intl.NumberFormat("en-US", {
+      const currency=   new Intl.NumberFormat("en-US", {
             style: "currency",
             currency: "USD",
         }).format(val)
-    
+        return ("US" + currency)
     
 }
 
