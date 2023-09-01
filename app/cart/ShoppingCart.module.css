@@ -47,6 +47,10 @@
   padding:  0 0 ;
   display: flex;
   /* position: 'relative' */
+  align-items:center;
+        /* justify-content:center; */
+        /* text-align: center; */
+
  
 }
 
@@ -59,10 +63,30 @@
   border-radius: 10px;
   overflow: hidden;
   background-color:#fa6e20;
-  border-style: solid;
+  /* border-style: solid; */
+  flex-shrink: 0;
+
 }
 
 
+.button {
+  border: none;
+  background: none;
+  font-weight: bold;
+  padding: 4px 8px;
+  margin: 0 6px;
+  border-radius: 3px;
+
+}
+
+
+@media (hover: hover) {
+  .button:hover {
+  background-color: #F0F0F0;
+
+}
+  
+}
 
 /* 
 
@@ -143,10 +167,4 @@
   color: rgb(10, 163, 10);
 }
 
-@media (hover: hover) {
-  .storeItem:hover .expand,
-  .storeItem:hover .cart {
-    display: flex;
-  }
-}
  */

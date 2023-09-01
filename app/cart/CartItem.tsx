@@ -30,9 +30,11 @@ const CartItem: React.FC<CartItemProps> = ({
         <div>{formatCurrency(product.price)}</div>
         <div>{product.description}</div>
         <div>
-          <button>+</button>
-          <span>QTY: 1</span>
-          <button>-</button></div>
+          <span>QTY:</span>
+          <button className={classes.button}>-</button>
+          <span>1</span>
+          <button className={classes.button}>+</button>
+          </div>
       </div>
     </div>
   )
