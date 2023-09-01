@@ -65,12 +65,21 @@ const StoreItem: React.FC<StoreItemProps> = ({ product }) => {
                   ${modalProduct.price}.00 USD
                 </span>
                 <hr />
+                <p className={classes.modalColor}>
+                  Color: <span>{modalProduct.color}</span>
+                </p>
                 <p className={classes.description}>
+                  <span>Description: </span>
                   {modalProduct.description}
                 </p>
                 <hr />
-                <div className={classes.modalCartButton}>
-                  Add to Cart <LuShoppingCart size={25} />
+                <div className={classes.section}>
+                  <div className={classes.modalCartButton}>
+                    Add to Cart <LuShoppingCart size={20} />
+                  </div>
+                  <div className={classes.modalSize}>
+                    Size: <span>{modalProduct.size}</span>
+                  </div>
                 </div>
                 <hr />
               </div>

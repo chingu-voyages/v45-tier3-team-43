@@ -19,18 +19,29 @@ export async function POST(request: Request) {
 
   const body = await request.json();
 
-  const { title, description, price, images } = body;
+  const { title, description, color, size, price, images } = body;
 
-  if (!title || !description || !price || images.length === 0) {
+  if (!title || !description || !color || !price || images.length === 0) {
     return NextResponse.json(
       { error: "At least one image required!" },
       { status: 422 }
     );
   }
 
+  if (!size) {
+    return NextResponse.json({ error: "Choose a size!" }, { status: 422 });
+  }
+
   if (title.length > 45) {
     return NextResponse.json(
       { error: "Max 45 Chars For Title!" },
+      { status: 422 }
+    );
+  }
+
+  if (color.length > 40) {
+    return NextResponse.json(
+      { error: "Max 40 Chars For Color!" },
       { status: 422 }
     );
   }
@@ -47,6 +58,8 @@ export async function POST(request: Request) {
     data: {
       title,
       description,
+      color,
+      size,
       price: parseInt(price, 10),
       images,
       userId: currentUser.id,
