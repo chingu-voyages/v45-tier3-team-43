@@ -1,0 +1,85 @@
+.hp {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+
+.hp h1 {
+  padding: 0.5rem;
+  color: rgb(54, 145, 250);
+  margin-bottom: 2rem;
+}
+
+.video {
+  filter: brightness(55%);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 0.5rem;
+  font-family: Visby;
+}
+
+.text {
+  width: 100%;
+  text-align: center;
+}
+
+.text p {
+  color: whitesmoke;
+}
+
+.mainText {
+  font-size: 2rem;
+  line-height: 1.2;
+  animation: slide-left-fade 4s;
+  margin-bottom: 1rem;
+}
+
+.mainText span {
+  color: #ffe601;
+}
+
+@keyframes slide-left-fade {
+  from {
+    top: 200px;
+    opacity: 0;
+    transform: translateY(50%);
+  }
+
+  to {
+    top: 100px;
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    font-family: Visby;
+  }
+  .mainText {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    animation: slide-left-fade 4s;
+    margin-bottom: 1rem;
+  }
+  .text {
+    width: 50%;
+  }
+}

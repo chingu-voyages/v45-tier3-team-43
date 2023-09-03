@@ -1,0 +1,57 @@
+.form {
+  max-width: 30rem;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  color: whitesmoke;
+  background-color: rgba(29, 29, 29, 0.495);
+  border-radius: 10px;
+  font-family: Visby-Reg;
+}
+
+.form button {
+  background-color: #ffe601;
+  border: none;
+  padding: 1rem;
+  border-radius: 0.375rem;
+  font: inherit;
+  color: hsl(240, 2%, 38%);
+}
+
+.switchModeOuter {
+  color: hsl(0, 0%, 84%);
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 300;
+}
+
+.switchModeInner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.switchToLogin {
+  color: rgb(238, 63, 44);
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .switchToLogin:hover {
+    text-decoration: underline;
+  }
+  .form button:hover {
+    background-color: #fefefef1;
+  }
+}
+
+@media (min-width: 450px) {
+  .form {
+    min-width: 400px;
+    padding: 2rem;
+  }
+}

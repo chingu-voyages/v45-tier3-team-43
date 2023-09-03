@@ -1,5 +1,9 @@
-import classes from "./page.module.css";
+import getCurrentUser from "./actions/getCurrentUser";
+import HomePage from "./components/homepage/HomePage";
 
-export default function Home() {
-  return <div className={classes.hello}>Hello</div>;
-}
+const Home = async () => {
+  const currentUser = await getCurrentUser();
+
+  return <HomePage currentUser={currentUser} />;
+};
+export default Home;

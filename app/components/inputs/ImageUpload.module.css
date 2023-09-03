@@ -1,0 +1,34 @@
+.container {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px dashed hsl(0, 0%, 83%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: hsl(0, 0%, 32%);
+  padding: 3rem;
+  max-width: 20rem;
+  /* margin-inline: auto; */
+}
+
+.instruction {
+  font-weight: 600;
+  font-size: 1rem /* 18px */;
+  line-height: 1.75rem /* 28px */;
+}
+
+.image {
+  position: absolute;
+  inset: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+@media (hover: hover) {
+  .container:hover {
+    opacity: 0.7;
+  }
+}

@@ -1,0 +1,45 @@
+.banner {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  height: 400px;
+  text-align: center;
+}
+
+.image {
+  object-fit: cover;
+  filter: brightness(50%);
+}
+
+.bannerContent {
+  z-index: 1;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mainContent {
+  width: 90%;
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 325px) {
+  .mainContent {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 465px) {
+  .mainContent {
+    font-size: 2rem;
+  }
+}
