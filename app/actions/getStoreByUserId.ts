@@ -5,6 +5,10 @@ export default async function getStoreByUserId() {
   try {
     const currentUser = await getCurrentUser();
 
+    if (!currentUser) {
+      return null;
+    }
+
     const store = await prisma.store.findUnique({
       where: {
         userId: currentUser?.id,
