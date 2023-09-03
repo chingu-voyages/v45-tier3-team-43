@@ -5,6 +5,10 @@ export default async function getBannerByUserId() {
   try {
     const currentUser = await getCurrentUser();
 
+    if (!currentUser) {
+      return null;
+    }
+
     const banner = await prisma.banner.findUnique({
       where: {
         userId: currentUser?.id,

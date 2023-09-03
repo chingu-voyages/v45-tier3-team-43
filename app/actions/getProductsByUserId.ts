@@ -5,6 +5,10 @@ export default async function getProductsByUserId() {
   try {
     const currentUser = await getCurrentUser();
 
+    if (!currentUser) {
+      return null;
+    }
+
     const products = await prisma.product.findMany({
       where: {
         userId: currentUser?.id,
