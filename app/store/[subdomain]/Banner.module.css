@@ -25,11 +25,32 @@
   flex-direction: column;
   align-items: center;
 }
+
 .mainContent {
   width: 90%;
   font-size: 1.15rem;
   font-weight: bold;
   margin-bottom: 2rem;
+}
+
+.dashboardBtn {
+  background-color: black;
+  color: white;
+  width: fit-content;
+  height: 2rem;
+  padding-inline: 0.5rem;
+  border: 1px solid black;
+  outline: none;
+  border-radius: 1rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .dashboardBtn:hover {
+    background-color: white;
+    color: black;
+  }
 }
 
 @media (min-width: 325px) {
