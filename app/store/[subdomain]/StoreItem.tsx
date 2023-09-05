@@ -37,6 +37,7 @@ const StoreItem: React.FC<StoreItemProps> = ({ product }) => {
       );
     }
     toast.success("Added to Cart!");
+    window.dispatchEvent(new Event("storage"));
   };
 
   return (

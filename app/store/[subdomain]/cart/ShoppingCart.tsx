@@ -46,7 +46,7 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ products }) => {
 
   const individualItems = Object.keys(counts);
 
-  const cart: Product[] = [];
+  let cart: Product[] = [];
 
   individualItems.forEach((item) => {
     const product = products?.find((product) => product.id === item);
@@ -85,6 +85,8 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ products }) => {
   cart.forEach((item) => {
     itemTotal = itemTotal + item.price * counts[item.id];
   });
+
+  cart = cart.sort((a, b) => b.price - a.price);
 
   return (
     <div>
