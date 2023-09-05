@@ -49,9 +49,18 @@
   cursor: pointer;
 }
 
-/* .inputContainer svg {
-  width: 1.5rem;
-} */
+/* this code prevents the input background color 
+from changing when using Chrome autocomplete */
+
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active {
+  -webkit-transition-delay: 9999s;
+  -webkit-transition: color 9999s ease-out, background-color 9999s ease-out;
+}
+
+/*  */
 
 .storeItems {
   width: 100%;
@@ -87,12 +96,13 @@
 
 .expand,
 .cart {
-  display: none;
+  /* display: none; */
+  display: flex;
   width: 2.2rem;
   height: 2.2rem;
   position: absolute;
   top: 11rem;
-  z-index: 1;
+  z-index: 2;
   cursor: pointer;
   background-color: white;
   border-radius: 50%;
@@ -277,10 +287,10 @@
 /*  */
 
 @media (hover: hover) {
-  .storeItem:hover .expand,
+  /* .storeItem:hover .expand,
   .storeItem:hover .cart {
     display: flex;
-  }
+  } */
   .expand:hover,
   .cart:hover {
     background-color: black;
