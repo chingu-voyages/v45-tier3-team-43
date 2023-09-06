@@ -123,7 +123,7 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ products }) => {
         )}
 
         <div>
-          <OrderSummary itemTotal={itemTotal} />
+          <OrderSummary itemTotal={itemTotal} cart={cart} counts={counts} />
         </div>
       </div>
     </div>

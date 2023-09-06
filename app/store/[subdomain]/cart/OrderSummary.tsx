@@ -1,19 +1,54 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import formatCurrency from "@/app/components/ui/formatCurrency";
 import classes from "./OrderSummary.module.css";
+import { Product } from "@prisma/client";
+import axios from "axios";
+import { useParams, useSearchParams } from "next/navigation";
+import toast from "react-hot-toast";
 
 interface OrderSummaryProps {
   itemTotal: number;
+  cart: Product[];
+  counts: any;
 }
 
-const OrderSummary: React.FC<OrderSummaryProps> = ({ itemTotal }) => {
-  function handleSubmit() {
-    alert("clicked checkout");
-  }
+const OrderSummary: React.FC<OrderSummaryProps> = ({
+  itemTotal,
+  cart,
+  counts,
+}) => {
+  const searchParams = useSearchParams();
+  const params = useParams();
 
   const orderTotal = (itemTotal + 15) * (1 + 7 / 100);
+
+  // console.log(counts);
+
+  useEffect(() => {
+    if (searchParams?.get("success")) {
+      localStorage.removeItem(params?.subdomain as string);
+      alert("Payment Completed!");
+      toast.success("Payment completed.");
+    }
+
+    if (searchParams?.get("cancelled")) {
+      alert("Payment Cancelled");
+      toast.error("Something went wrong.");
+    }
+  }, [searchParams, params?.subdomain]);
+
+  const onCheckout = async () => {
+    const response = await axios.post(`/api/${params?.subdomain}/checkout`, {
+      productIds: cart.map((item) => item.id),
+      counts: counts,
+    });
+
+    window.location = response.data.url;
+  };
+
+  // console.log(cart.length);
 
   return (
     <>
@@ -36,7 +71,11 @@ const OrderSummary: React.FC<OrderSummaryProps> = ({ itemTotal }) => {
           <div>{formatCurrency(orderTotal)}</div>
         </div>
 
-        <button className={classes.button} onClick={handleSubmit}>
+        <button
+          className={classes.button}
+          onClick={onCheckout}
+          disabled={cart.length === 0}
+        >
           Checkout
         </button>
       </div>
