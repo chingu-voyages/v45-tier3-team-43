@@ -99,8 +99,8 @@ export async function POST(
     phone_number_collection: {
       enabled: true,
     },
-    success_url: `http://localhost:3000/store/${params.subdomain}/cart?success=1`,
-    cancel_url: `http://localhost:3000/store/${params.subdomain}/cart?cancelled=1`,
+    success_url: `https://fashionvista.vercel.app/store/${params.subdomain}/cart?success=1`,
+    cancel_url: `https://fashionvista.vercel.app/store/${params.subdomain}/cart?cancelled=1`,
     metadata: {
       orderId: order.id,
     },
