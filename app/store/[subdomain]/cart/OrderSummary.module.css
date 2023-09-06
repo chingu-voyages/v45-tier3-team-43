@@ -22,9 +22,17 @@
   cursor: pointer;
 }
 
+.button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
 @media (hover: hover) {
   .button:hover {
     background-color: #f89865;
+  }
+  .button:disabled:hover {
+    background-color: #ccc;
   }
 }
 
