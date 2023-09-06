@@ -35,6 +35,7 @@ model Store {
   userId String @db.ObjectId @unique
 
   products Product[]
+  orders Order[]
   banner Banner?
 
   // line below creates a relation with the User using the userId field and 
@@ -71,5 +72,18 @@ model Banner {
   // line below creates a relation with the User using the userId field and 
   // it references the User model id field
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  store Store @relation(fields: [storeId], references: [id], onDelete: Cascade)
+}
+
+model Order {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  orderItems String[]
+  counts Json
+  isPaid Boolean
+  phone String
+  address String
+  createdAt DateTime @default(now())
+  storeId String @db.ObjectId
+
   store Store @relation(fields: [storeId], references: [id], onDelete: Cascade)
 }
