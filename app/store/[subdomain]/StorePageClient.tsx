@@ -3,6 +3,7 @@ import classes from "./StorePageClient.module.css";
 import HeaderClient from "./HeaderClient";
 import StoreList from "./StoreList";
 import BannerClient from "./Banner";
+import Footer from "@/app/components/common/Footer";
 
 interface StorePageClientProps {
   store: Store | null;
@@ -38,6 +39,7 @@ const StorePageClient: React.FC<StorePageClientProps> = ({
       <HeaderClient store={store} />
       <BannerClient banner={banner} isStoreOwner={isStoreOwner} />
       <StoreList products={products} />
+      <Footer store={store} />
     </div>
   );
 };
