@@ -28,7 +28,7 @@ export async function POST(
     return new NextResponse("Store not found!", { status: 422 });
   }
 
-  const { productIds, counts } = await req.json();
+  const { productIds, counts, orderTotal } = await req.json();
 
   //   console.log(params.subdomain);
 
@@ -64,6 +64,7 @@ export async function POST(
       storeId: store.id,
       isPaid: false,
       orderItems: productIds,
+      orderTotal: orderTotal,
       counts: counts,
       phone: "",
       address: "",
