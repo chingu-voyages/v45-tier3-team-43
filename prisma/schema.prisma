@@ -78,6 +78,7 @@ model Banner {
 model Order {
   id String @id @default(auto()) @map("_id") @db.ObjectId
   orderItems String[]
+  orderTotal Int
   counts Json
   isPaid Boolean
   phone String
