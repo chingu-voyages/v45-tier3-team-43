@@ -51,6 +51,7 @@ model Product {
   size String
   price Int
   images String[]
+  archived Boolean
   createdAt DateTime @default(now())
   userId String @db.ObjectId
   storeId String @db.ObjectId

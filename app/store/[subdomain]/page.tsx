@@ -10,14 +10,18 @@ interface IParams {
 
 const StorePage = async ({ params }: { params: IParams }) => {
   const store = await getStoreById(params);
-  const products = await getProductsByStoreId(params);
+  const allProducts = await getProductsByStoreId(params);
   const banner = await getBannerByStoreId(params);
   const currentUser = await getCurrentUser();
+
+  const unarchivedProducts = allProducts.filter(
+    (product) => product.archived !== true
+  );
 
   return (
     <StorePageClient
       store={store}
-      products={products}
+      products={unarchivedProducts}
       banner={banner}
       currentUser={currentUser}
     />

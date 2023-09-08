@@ -7,22 +7,25 @@ import { toast } from "react-hot-toast";
 import { useState } from "react";
 import Input from "../components/inputs/Input";
 import { useRouter } from "next/navigation";
-import { Banner, Product, Store } from "@prisma/client";
+import { Banner, Order, Product, Store } from "@prisma/client";
 import classes from "./DashboardClient.module.css";
 import ProductsList from "../components/dashboard/ProductsList";
 import AddProductClient from "../components/dashboard/AddProductClient";
 import BannerForm from "../components/dashboard/BannerForm";
+import OrdersList from "../components/dashboard/OrdersList";
 
 interface DashboardClientProps {
   store: Store | null;
   products: Product[] | null;
   banner: Banner | null;
+  orders: Order[] | null;
 }
 
 const DashboardClient: React.FC<DashboardClientProps> = ({
   store,
   products,
   banner,
+  orders,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [tab, setTab] = useState("productsTab");
@@ -177,6 +180,20 @@ const DashboardClient: React.FC<DashboardClientProps> = ({
               {store && (
                 <div className={classes.products}>
                   <ProductsList products={products} />
+                </div>
+              )}
+            </div>
+          )}
+
+          {tab === "ordersTab" && (
+            <div className={classes.screen}>
+              <div className={classes.screenHeading}>
+                <h3>Dashboard</h3>
+              </div>
+
+              {store && (
+                <div className={classes.orders}>
+                  <OrdersList orders={orders} products={products} />
                 </div>
               )}
             </div>

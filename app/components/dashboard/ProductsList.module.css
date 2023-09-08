@@ -3,7 +3,13 @@
 }
 
 .productsContainer h3 {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+.note {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  padding-inline: 0.6rem;
 }
 
 .products > :nth-child(2n) {
@@ -87,13 +93,7 @@
   width: 100%;
 }
 
-.productActions {
-  display: flex;
-  gap: 1rem;
-  justify-self: flex-end;
-}
-
-.deleteProductButton,
+.archiveProductButton,
 .viewProductPicturesButton {
   width: fit-content;
   height: 2rem;
@@ -106,7 +106,7 @@
   cursor: pointer;
 }
 
-.deleteProductButton {
+.archiveProductButton {
   background-color: rgb(141, 16, 16);
   display: flex;
   justify-content: center;
@@ -122,18 +122,25 @@
 
 @media (min-width: 600px) {
   .columnTitles {
-    width: 65%;
+    width: calc(62% - 0.5rem);
     border-bottom: none;
     grid-template-columns: 3fr 1fr;
   }
   .productInfo {
     width: 100%;
     display: grid;
-    grid-template-columns: 65% 35%;
+    grid-template-columns: calc(62% - 0.5rem) calc(38% - 0.5rem);
     gap: 1rem;
     padding: 0.5rem 0;
   }
   .details {
     grid-template-columns: 3fr 1fr;
+  }
+  .productActions {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding-right: 0.5rem;
   }
 }

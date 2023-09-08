@@ -7,10 +7,7 @@ interface IParams {
   productId?: string;
 }
 
-export async function DELETE(
-  request: Request,
-  { params }: { params: IParams }
-) {
+export async function POST(request: Request, { params }: { params: IParams }) {
   const currentUser = await getCurrentUser();
 
   if (!currentUser) {
@@ -23,12 +20,34 @@ export async function DELETE(
     throw new Error("Invalid ID");
   }
 
-  const product = await prisma.product.deleteMany({
+  const product = await prisma.product.findUnique({
     where: {
       id: productId,
       userId: currentUser.id,
     },
   });
 
-  return NextResponse.json(product);
+  if (!product) {
+    return NextResponse.error();
+  }
+
+  let value;
+
+  if (product.archived === false) {
+    value = true;
+  } else {
+    value = false;
+  }
+
+  const updatedProduct = await prisma.product.update({
+    where: {
+      id: productId,
+      userId: currentUser.id,
+    },
+    data: {
+      archived: value,
+    },
+  });
+
+  return NextResponse.json(updatedProduct);
 }
