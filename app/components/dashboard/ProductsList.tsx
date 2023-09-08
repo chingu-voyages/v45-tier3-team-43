@@ -31,7 +31,9 @@ const ProductsList: React.FC<ProductsListProps> = ({ products }) => {
   return (
     <div className={classes.productsContainer}>
       <h3>Products</h3>
-
+      <p className={classes.note}>
+        <b>Note: </b>archived products are not shown on your store page!
+      </p>
       {!products ||
         (products.length === 0 && (
           <div className={classes.noProducts}>
