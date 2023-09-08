@@ -8,14 +8,13 @@
   width: 100%;
   max-width: 1440px;
   margin-inline: auto;
-  padding-bottom: 2rem;
+  padding-bottom: 5rem;
 }
 
 .heading {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* align-items: center; */
   margin-bottom: 1.5rem;
 }
 
@@ -68,7 +67,6 @@ from changing when using Chrome autocomplete */
   margin-inline: auto;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  /* column-gap: 1.5rem; */
   row-gap: 3rem;
 }
 
@@ -91,12 +89,10 @@ from changing when using Chrome autocomplete */
 .itemImage {
   filter: brightness(90%);
   object-fit: cover;
-  /* position: relative !important; */
 }
 
 .expand,
 .cart {
-  /* display: none; */
   display: flex;
   width: 2.2rem;
   height: 2.2rem;
@@ -107,7 +103,6 @@ from changing when using Chrome autocomplete */
   background-color: white;
   border-radius: 50%;
   color: black;
-  /* display: flex; */
   justify-content: center;
   align-items: center;
 }
@@ -226,7 +221,6 @@ from changing when using Chrome autocomplete */
 }
 
 .description {
-  /* background-color: #aef8ee; */
   font-size: 0.8rem;
   margin-bottom: 1rem;
   word-break: break-word;
