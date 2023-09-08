@@ -1,0 +1,11 @@
+.ordersContainer {
+  margin-bottom: 1rem;
+}
+
+.ordersContainer h3 {
+  margin-bottom: 2rem;
+}
+
+.noOrders {
+  text-align: center;
+}

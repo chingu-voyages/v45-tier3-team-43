@@ -1,0 +1,91 @@
+.container {
+  border-bottom: 2px solid black;
+  padding: 1rem;
+  text-align: center;
+}
+
+.orderFace {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  /* text-align: center; */
+}
+
+.viewOrderButton {
+  width: fit-content;
+  height: 2rem;
+  font: inherit;
+  font-size: 0.8rem;
+  padding-inline: 0.5rem;
+  background-color: hsl(244, 42%, 36%);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.address,
+.phone {
+  margin-bottom: 1rem;
+}
+
+.address p {
+  word-break: break-word;
+}
+
+.productsContainer > h4 {
+  margin-bottom: 0.8rem;
+}
+
+.orderProduct {
+  width: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.orderProduct p {
+  word-break: break-word;
+}
+
+.imageContainer {
+  height: 6rem;
+  width: 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 350px) {
+  .products {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 650px) {
+  .orderFace {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+  }
+}
