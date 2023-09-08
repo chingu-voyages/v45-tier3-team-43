@@ -3,7 +3,6 @@
 import { Product } from "@prisma/client";
 import Image from "next/image";
 import axios from "axios";
-import { RiDeleteBinLine } from "react-icons/ri";
 import { toast } from "react-hot-toast";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
@@ -17,11 +16,11 @@ const ProductsList: React.FC<ProductsListProps> = ({ products }) => {
   const [showPics, setShowPics] = useState<string>("");
   const router = useRouter();
 
-  const deleteProduct = (productId: any) => {
+  const archiveProduct = (productId: any) => {
     axios
-      .delete(`api/products/${productId}`)
+      .post(`api/products/${productId}`)
       .then(() => {
-        toast.success("Product Deleted!");
+        toast.success("Success!");
         router.refresh();
       })
       .catch((error) => {
@@ -62,13 +61,13 @@ const ProductsList: React.FC<ProductsListProps> = ({ products }) => {
                       }
                       className={classes.viewProductPicturesButton}
                     >
-                      View Pictures
+                      {showPics === product.id ? "Hide Pics" : "View Pics"}
                     </button>
                     <button
-                      onClick={deleteProduct.bind(null, product.id)}
-                      className={classes.deleteProductButton}
+                      onClick={archiveProduct.bind(null, product.id)}
+                      className={classes.archiveProductButton}
                     >
-                      <RiDeleteBinLine />
+                      {product.archived === true ? "Unarchive" : "Archive"}
                     </button>
                   </div>
                 </div>

@@ -62,6 +62,7 @@ export async function POST(request: Request) {
       size,
       price: parseInt(price, 10),
       images,
+      archived: false,
       userId: currentUser.id,
       storeId: currentStore.id,
     },
