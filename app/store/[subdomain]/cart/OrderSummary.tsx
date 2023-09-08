@@ -43,6 +43,7 @@ const OrderSummary: React.FC<OrderSummaryProps> = ({
     const response = await axios.post(`/api/${params?.subdomain}/checkout`, {
       productIds: cart.map((item) => item.id),
       counts: counts,
+      orderTotal: itemTotal + 15,
     });
 
     window.location = response.data.url;
