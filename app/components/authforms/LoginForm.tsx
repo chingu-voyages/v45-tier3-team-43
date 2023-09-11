@@ -48,6 +48,8 @@ const LoginForm: React.FC<LoginFormProps> = ({ toggleMode }) => {
       <h2 style={{ fontSize: "1.3rem", fontFamily: "Visby" }}>
         Let&apos;s get started!
       </h2>
+      <p className={classes.demo}>Demo Email: test@test.com</p>
+      <p className={classes.demo}>Demo Password: testers</p>
       <Input
         id="email"
         label="Email"
@@ -65,7 +67,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ toggleMode }) => {
         errors={errors}
         required
       />
-      <button type="submit">{isLoading ? 'connecting ...': 'Continue'}</button>
+      <button type="submit">{isLoading ? "connecting ..." : "Continue"}</button>
       <div className={classes.switchModeOuter}>
         <div className={classes.switchModeInner}>
           <div>First time using FashionVista?</div>
