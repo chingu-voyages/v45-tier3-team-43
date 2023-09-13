@@ -9,6 +9,26 @@ FashionVista is an e-commerce platform that allows anyone to create an account, 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+Demo Credentials: 
+
+- Username is test@test.com
+- Password is testers
+
+Key Features:
+
+- Create an account and sign in or use the demo credentials
+- Create your own store page by entering a store title and a custom subdomain into the provided form
+- Add products to your store from the dashboard page
+- Add a custom store banner image and text from the dashboard page
+- Archive/unarchive your products from the dashboard page
+- Visit your store page
+- Share your unique store page URL with others
+- Use the search bar functionality to search for a product
+- Open product detail modals for more info about a product
+- Add products to your cart
+- Checkout and finalize a purchase using Stripe
+- View the order history for your store on the dashboard page
+
 ## Setting up the Project
 
 ### Cloning the repository
@@ -46,7 +66,7 @@ npx prisma db push
 npm run dev
 ```
 
-## Available commands
+### Available commands
 
 Running commands with npm `npm run [command]`
 
