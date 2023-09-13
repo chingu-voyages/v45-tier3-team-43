@@ -124,6 +124,18 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - [@types/bcrypt](https://www.npmjs.com/package/@types/bcrypt)
 - [prisma](https://www.npmjs.com/package/prisma)
 
+## Screenshots
+<table>
+  <tr>
+     <td><img src="public/assets/readme/products.png" alt="Screenshot of the products tab" /></td>
+     <td><img src="public/assets/readme/orders.png" alt="Screenshot of the orders tab" /></td>
+     <td><img src="public/assets/readme/store-page-banner.png" alt="Screenshot of the store page banner" /></td>
+     <td><img src="public/assets/readme/store-page-products.png" alt="Screenshot of the store page products" /></td>
+     <td><img src="public/assets/readme/cart-page.png" alt="Screenshot of the cart page" /></td>
+     <td><img src="public/assets/readme/stripe-page.png" alt="Screenshot of the Stripe checkout page" /></td>
+  </tr>
+</table>
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
