@@ -1,29 +1,60 @@
 # FashionVista
 FashionVista is an e-commerce platform that allows anyone to create an account, and then create their own fashion store. Users can choose their own custom subdomain for their store and share their store URL with others.
+
 [Live Site](https://fashionvista.vercel.app/)
+
 [Example Store](https://fashionvista.vercel.app/store/brandonstore)
 
 ![Project Screenshot](public/assets/readme/home.png)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Setting up the Project
 
-First, run the development server:
+### Cloning the repository
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+```shell
+git clone git@github.com:chingu-voyages/v45-tier3-team-43.git
+```
+### Install packages
+
+```shell
+npm i
 ```
 
+### Setup .env file
+
+**The 2 environment variables for Stripe can be found in your personal Stripe account, follow Stripe instructions to get them**
+
+```js
+DATABASE_URL=
+NEXTAUTH_SECRET=
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=
+STRIPE_API_KEY=
+STRIPE_WEBHOOK_SECRET=
+```
+
+### Connect to MongoDB and Push Prisma
+```shell
+npx prisma generate
+npx prisma db push
+```
+
+
+### Start the app
+```shell
+npm run dev
+```
+
+## Available commands
+
+Running commands with npm `npm run [command]`
+
+| command         | description                              |
+| :-------------- | :--------------------------------------- |
+| `dev`           | Starts a development instance of the app |
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
 ## Learn More
 
