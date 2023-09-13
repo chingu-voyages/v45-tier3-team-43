@@ -5,14 +5,14 @@ FashionVista is an e-commerce platform that allows anyone to create an account, 
 
 [Example Store](https://fashionvista.vercel.app/store/brandonstore)
 
-![Project Screenshot](public/assets/readme/home.png)
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 Demo Credentials: 
 
 - Username is test@test.com
 - Password is testers
+
+![Project Screenshot](public/assets/readme/home.png)
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 Key Features:
 
@@ -44,7 +44,10 @@ npm i
 
 ### Setup .env file
 
-**The 2 environment variables for Stripe can be found in your personal Stripe account, follow Stripe instructions to get them**
+- The environment variable for the database URL can be found in your personal MongoDB account
+- The environment variable for NextAuth is a random string of your choice
+- The environment variable for Cloudinary can be found in your personal Cloudinary account
+- The 2 environment variables for Stripe can be found in your personal Stripe account, follow Stripe instructions to get them
 
 ```js
 DATABASE_URL=
@@ -75,6 +78,44 @@ Running commands with npm `npm run [command]`
 | `dev`           | Starts a development instance of the app |
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Technologies/Tools Used
+- Next.js
+- React.js
+- TypeScript
+- Git/Github
+- CSS Modules
+- Cloudinary
+- MongoDB
+- NextAuth
+- Stripe
+- Prisma
+- Vercel
+
+## Dependencies
+- [@next-auth/prisma-adapter](https://www.npmjs.com/package/@next-auth/prisma-adapter)
+- [@prisma/client](https://www.npmjs.com/package/@prisma/client)
+- [@types/node](https://www.npmjs.com/package/@types/node)
+- [@types/react](https://www.npmjs.com/package/@types/react)
+- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom)
+- [axios](https://www.npmjs.com/package/axios)
+- [bcrypt](https://www.npmjs.com/package/bcrypt)
+- [eslint](https://www.npmjs.com/package/eslint)
+- [eslint-config-next](https://www.npmjs.com/package/eslint-config-next)
+- [next](https://www.npmjs.com/package/next)
+- [next-auth](https://www.npmjs.com/package/next-auth)
+- [next-cloudinary](https://www.npmjs.com/package/next-cloudinary)
+- [react](https://www.npmjs.com/package/react)  
+- [react-dom](https://www.npmjs.com/package/react-dom)
+- [react-hook-form](https://www.npmjs.com/package/react-hook-form)
+- [react-hot-toast](https://www.npmjs.com/package/react-hot-toast)
+- [react-icons](https://www.npmjs.com/package/react-icons)
+- [stripe](https://www.npmjs.com/package/stripe)
+- [typescript](https://www.npmjs.com/package/typescript)
+
+## Dev Dependencies
+- [@types/bcrypt](https://www.npmjs.com/package/@types/bcrypt)
+- [prisma](https://www.npmjs.com/package/prisma)
 
 ## Learn More
 
