@@ -1,6 +1,13 @@
 # FashionVista
 FashionVista is an e-commerce platform that allows anyone to create an account, and then create their own fashion store. Users can choose their own custom subdomain for their store and share their store URL with others.
 
+Contributors:
+- Brandon Bhangari | [Github](https://github.com/curiousmind04) | [Portfolio](https://brandonbhangari.netlify.app/) | [LinkedIn](https://www.linkedin.com/in/brandon-bhangari/)
+- Albert Ngodi | [Github](https://github.com/ngodi)
+- Carlos Pereira | [Github](https://github.com/CarlosHenriqueMkt)
+- Rachel Stroy | [Github](https://github.com/R-LaRoi)
+- Diana Jordan | [Github](https://github.com/jordandc20)
+
 [Live Site](https://fashionvista.vercel.app/)
 
 [Example Store](https://fashionvista.vercel.app/store/brandonstore)
