@@ -1,7 +1,7 @@
 # FashionVista
 FashionVista is an e-commerce platform that allows anyone to create an account, and then create their own fashion store. Users can choose their own custom subdomain for their store and share their store URL with others.
 
-Contributors:
+**Contributors:**
 - Brandon Bhangari | [Github](https://github.com/curiousmind04) | [Portfolio](https://brandonbhangari.netlify.app/) | [LinkedIn](https://www.linkedin.com/in/brandon-bhangari/)
 - Albert Ngodi | [Github](https://github.com/ngodi)
 - Carlos Pereira | [Github](https://github.com/CarlosHenriqueMkt)
@@ -12,7 +12,7 @@ Contributors:
 
 [Example Store](https://fashionvista.vercel.app/store/brandonstore)
 
-Demo Credentials: 
+**Demo Credentials:** 
 
 - Username is test@test.com
 - Password is testers
@@ -21,7 +21,7 @@ Demo Credentials:
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Key Features:
+**Key Features:**
 
 - Create an account and sign in or use the demo credentials
 - Create your own store page by entering a store title and a custom subdomain into the provided form
