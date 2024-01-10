@@ -55,12 +55,10 @@ const DashboardClient: React.FC<DashboardClientProps> = ({
   };
 
   return (
-    <div>
+    <div className={classes.page}>
       <nav className={classes.navbar}>
-        <h2>FashionVista</h2>
-        <button onClick={() => signOut()} className={classes.logoutButton}>
-          Sign Out
-        </button>
+        {/* <h2>FashionVista</h2> */}
+       
       </nav>
 
       {isOpen && tab === "createStore" && (
@@ -132,6 +130,9 @@ const DashboardClient: React.FC<DashboardClientProps> = ({
             <div className={classes.tabButtons}>
               <button onClick={() => setTab("productsTab")}>Products</button>
               <button onClick={() => setTab("ordersTab")}>Orders</button>
+                  <button onClick={() => signOut()} className={classes.logoutButton}>
+          Sign Out
+        </button>
             </div>
           </div>
           {tab === "productsTab" && (
@@ -157,10 +158,12 @@ const DashboardClient: React.FC<DashboardClientProps> = ({
                   <ProductsList products={products} />
                 </div>
               )}
+           
             </div>
           )}
         </div>
       )}
+      
     </div>
   );
 };

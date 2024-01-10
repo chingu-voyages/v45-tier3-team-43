@@ -9,7 +9,7 @@
   height: 2rem;
   font: inherit;
   padding-inline: 0.5rem;
-  background-color: blue;
+  /* background-color: blue; */
   color: white;
   border: none;
   cursor: pointer;
@@ -46,7 +46,7 @@
   height: 2rem;
   font: inherit;
   padding-inline: 0.5rem;
-  background-color: blue;
+  background-color: rgb(255, 77, 0);
   color: white;
   border: none;
   cursor: pointer;

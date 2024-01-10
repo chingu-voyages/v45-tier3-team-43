@@ -1,16 +1,16 @@
-.navbar {
-  background-color: hsl(244, 42%, 36%);
-  padding: 1rem;
-  /* margin-bottom: 2rem; */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navbar h2 {
-  color: white;
+/* .navbar h2 {
+  color: blue;
   font-size: 1.15rem;
+} */
+
+.page {
+  padding: 30px;
+  background-image: linear-gradient(
+    to top,
+    #f3e7e9 0%,
+    #e3eeff 99%,
+    #e3eeff 100%
+  );
 }
 
 .logoutButton,
@@ -23,7 +23,7 @@
   height: 2rem;
   font: inherit;
   padding-inline: 0.5rem;
-  background-color: blue;
+  /* background-color: blue; */
   color: white;
   border: none;
   cursor: pointer;
@@ -40,7 +40,7 @@
 
 .logoutButton,
 .cancelFormButton {
-  background-color: rgb(141, 16, 16);
+  /* background-color: rgb(141, 16, 16); */
 }
 
 .form {
@@ -67,16 +67,22 @@
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: rgba(238, 206, 206, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 20px;
 }
 
 .lowerNav {
-  border-bottom: 1px solid black;
-  padding: 2rem 1rem 1rem 1rem;
+  background-color: rgb(255, 166, 42);
+
+  /* padding: 2rem 1rem 1rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 1rem; */
 }
 
 .tabButtons {
@@ -93,7 +99,7 @@
   padding-inline: 0.5rem;
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid black;
+
   color: black;
   cursor: pointer;
 }
@@ -115,10 +121,11 @@
 }
 
 .products {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   padding: 1rem 0.5rem;
   border-radius: 0.6rem;
-  background-color: #f1f0f0;
+  /* background-color: #f1f0f0; */
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 @media (hover: hover) {
@@ -148,13 +155,16 @@
     font-size: 1.5rem;
   }
   .container {
-    flex-direction: row;
+    background-image: radial-gradient(
+      circle 343px at 46.3% 47.5%,
+      rgba(242, 242, 242, 1) 0%,
+      rgba(241, 241, 241, 1) 72.9%
+    );
   }
   .lowerNav {
-    background-color: rgb(179, 197, 247);
     width: 14rem;
     border-bottom: none;
-    border-right: 1px solid black;
+    /* border-right: 1px solid black; */
     justify-content: flex-start;
     gap: 1.5rem;
   }
